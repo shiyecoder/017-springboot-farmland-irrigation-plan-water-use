@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>登录 · 农田灌溉计划与用水统计系统</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;min-height:100vh;display:grid;
+  grid-template-columns:1.05fr .95fr;background:#F4F8FB;color:#1D2A33}
+.left{background:linear-gradient(150deg,#0F3B5D 0%,#1B4F73 55%,#245A7A 100%);color:#fff;
+  padding:56px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.left::after{content:"";position:absolute;right:-90px;bottom:-110px;width:380px;height:380px;
+  border:1px solid rgba(255,255,255,.13);border-radius:50%}
+.brand{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:600;letter-spacing:.5px}
+.left h1{font-size:34px;line-height:1.35;font-weight:600;margin:0 0 16px}
+.left p{font-size:14px;color:rgba(255,255,255,.72);line-height:1.9;max-width:400px}
+.facts{display:flex;gap:36px}
+.facts div b{display:block;font-size:26px;font-weight:600;font-variant-numeric:tabular-nums}
+.facts div span{font-size:12.5px;color:rgba(255,255,255,.6)}
+.right{display:grid;place-items:center;padding:40px}
+.card{width:380px}
+.card h2{font-size:22px;font-weight:600;margin-bottom:6px}
+.card .tip{font-size:13px;color:#5A6B78;margin-bottom:26px}
+label{font-size:13px;color:#5A6B78;display:block;margin-bottom:6px}
+input{width:100%;height:42px;border:1px solid #DCE6EE;border-radius:6px;padding:0 12px;font-size:14px;
+  margin-bottom:16px;font-family:inherit}
+input:focus{outline:2px solid #2878B5;outline-offset:-1px;border-color:#2878B5}
+.btn{width:100%;height:42px;border:0;border-radius:6px;background:#0F3B5D;color:#fff;font-size:14.5px;
+  font-weight:500;cursor:pointer;font-family:inherit}
+.row{display:flex;justify-content:space-between;font-size:13px;color:#5A6B78;margin-bottom:20px}
+a{color:#245A7A;text-decoration:none}
+.roles{display:flex;gap:8px;margin-top:22px;font-size:12px;color:#5A6B78}
+.roles span{padding:3px 9px;border:1px solid #DCE6EE;border-radius:4px;background:#fff}
+</style></head><body>
+<div class="left">
+  <div class="brand"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 11-12 0c0-4.5 6-11 6-11z" fill="#7FB3D5"/></svg>
+    灌区用水管理平台</div>
+  <div><h1>把每一方水<br>都算到地块上</h1>
+    <p>水源、渠道、闸口、水表一体化台账；计划排程自动校验闸口容量；抄表数据驱动定额扣减与分段计费。</p></div>
+  <div class="facts"><div><b>1.2 万亩</b><span>覆盖灌溉面积</span></div>
+    <div><b>126</b><span>在册地块</span></div><div><b>98.4%</b><span>计划完成率</span></div></div>
+</div>
+<div class="right"><div class="card">
+  <h2>登录</h2><div class="tip">使用灌区分配的账号登录，连续 5 次失败将锁定 10 分钟</div>
+  <label>账号</label><input value="admin" placeholder="请输入账号">
+  <label>密码</label><input type="password" value="admin123" placeholder="请输入密码">
+  <div class="row"><span><input type="checkbox" style="width:auto;height:auto;margin-right:6px">记住账号</span><a href="#">忘记密码</a></div>
+  <button class="btn">登录</button>
+  <div class="roles"><span>管理员 admin</span><span>调度员 dispatcher01</span><span>放水员 operator01</span><span>种植户 farmer01</span></div>
+</div></div></body></html>

@@ -1,0 +1,130 @@
+:root {
+  --primary: #0F3B5D;
+  --secondary: #2878B5;
+  --accent: #245A7A;
+  --bg: #F4F8FB;
+  --surface: #fff;
+  --success: #1F7653;
+  --danger: #B22B31;
+  --warning: #B4761E;
+  --text: #1D2A33;
+  --text-2: #5A6B78;
+  --line: #DCE6EE;
+  --side-w: 220px;
+  --top-h: 56px;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #app { height: 100%; margin: 0; }
+
+body {
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  line-height: 1.57;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+
+.num, .el-table .num { font-variant-numeric: tabular-nums; }
+
+/* 页面骨架 */
+.page-title { font-size: 20px; line-height: 28px; font-weight: 600; margin: 0 0 4px; }
+.page-sub { font-size: 13px; color: var(--text-2); margin: 0 0 16px; }
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+.panel-hd {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 13px 18px; border-bottom: 1px solid var(--line);
+  font-size: 15px; font-weight: 600;
+}
+.panel-bd { padding: 18px; }
+.panel-bd.flush { padding: 0 18px 16px; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; margin-bottom: 14px; }
+.filters .el-select { width: 200px; }
+.filters .el-input { width: 200px; }
+.filters .grow { flex: 1; }
+
+/* 指标卡 */
+.kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-bottom: 14px; }
+.kpis.four { grid-template-columns: repeat(4, 1fr); }
+.kpi {
+  background: #fff; border: 1px solid var(--line); border-radius: 8px;
+  padding: 12px 14px;
+}
+.kpi .lb { font-size: 12.5px; color: var(--text-2); margin-bottom: 4px; white-space: nowrap; }
+.kpi .vl {
+  font-size: 24px; font-weight: 600; line-height: 1.2;
+  font-variant-numeric: tabular-nums; color: var(--primary);
+}
+.kpi .vl small { font-size: 12px; font-weight: 400; color: var(--text-2); margin-left: 3px; }
+.kpi .dt { font-size: 12px; margin-top: 3px; color: var(--success); }
+.kpi .dt.warn { color: var(--warning); }
+.kpi .dt.bad { color: var(--danger); }
+
+/* 图表区 */
+.charts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.chart {
+  background: #fff; border: 1px solid var(--line); border-radius: 8px;
+  padding: 12px 14px; min-width: 0;
+}
+.chart h4 {
+  font-size: 13.5px; font-weight: 600; margin: 0 0 6px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.chart h4 em { font-style: normal; font-size: 12px; color: var(--text-2); font-weight: 400; }
+.chart .cv { height: 132px; width: 100%; }
+.chart.tall .cv { height: 148px; }
+
+/* 表头不固定宽度，允许横向滚动 */
+.table-wrap { width: 100%; overflow-x: auto; }
+.el-table th .cell { white-space: nowrap; color: var(--text-2); font-weight: 500; }
+.el-table .cell { font-size: 13.5px; }
+
+.pager { display: flex; justify-content: flex-end; padding-top: 14px; }
+
+/* 状态标签 */
+.tag {
+  display: inline-flex; align-items: center; height: 22px; padding: 0 8px;
+  border-radius: 4px; font-size: 12px; white-space: nowrap;
+}
+.tag.blue { background: #EAF2F8; color: #245A7A; }
+.tag.sky { background: #E6F0F8; color: #2878B5; }
+.tag.ok { background: #E7F3ED; color: #1F7653; }
+.tag.bad { background: #FBEAEA; color: #B22B31; }
+.tag.warn { background: #FBF0DF; color: #B4761E; }
+.tag.info { background: #F0F3F5; color: #5A6B78; }
+
+/* 详情 */
+.kv { display: flex; gap: 12px; font-size: 13.5px; padding: 7px 0; border-bottom: 1px dashed #EDF3F8; }
+.kv dt { width: 98px; color: var(--text-2); flex: 0 0 98px; }
+.kv dd { flex: 1; margin: 0; }
+
+/* 提示条 */
+.notice {
+  background: #FBF0DF; border: 1px solid #E9CFA6; color: #8A5A12;
+  border-radius: 6px; padding: 9px 14px; font-size: 13px; margin-bottom: 14px;
+}
+.notice.info { background: #EAF2F8; border-color: #C6DCEA; color: #245A7A; }
+
+/* Element Plus 覆盖：贴近单位内部系统的克制风格 */
+.el-button--primary { --el-button-bg-color: var(--primary); --el-button-border-color: var(--primary); }
+.el-button { border-radius: 6px; }
+.el-input__wrapper, .el-select__wrapper { border-radius: 6px; }
+.el-card { border-radius: 8px; }
+.el-drawer__header { margin-bottom: 12px; font-weight: 600; color: var(--text); }
+.el-dialog { border-radius: 8px; }
+
+@media (max-width: 1440px) {
+  .kpis { gap: 10px; }
+  .kpi .vl { font-size: 22px; }
+}

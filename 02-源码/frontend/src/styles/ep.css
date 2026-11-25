@@ -1,0 +1,9 @@
+/* Element Plus 细节覆盖：统一圆角、字号与表格密度，避免默认样式与设计系统冲突 */
+.el-table { --el-table-border-color: #EDF3F8; --el-table-header-bg-color: #F8FBFD; }
+.el-table th.el-table__cell { padding: 9px 0; }
+.el-table td.el-table__cell { padding: 9px 0; }
+.el-form-item__label { color: #5A6B78; font-weight: 400; }
+.el-drawer { border-radius: 12px 0 0 12px; }
+.el-pagination { --el-pagination-button-bg-color: #fff; }
+.el-tag { border-radius: 4px; }
+.el-message-box { border-radius: 8px; }
